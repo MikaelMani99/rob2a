@@ -1,0 +1,6 @@
+ummálið á hjólinu er = 2pi * 5 31.42
+til að fara hálfan meter áfram þar hólið að snúast = 50/31.42 = 1.59 sinnum
+ef hjólið fer 360° í hvert skiptið sem það snýst þá þarf það að snúast = 360 * 1.59 = 572.4° til að fara hálfan meter áfram
+í drive fallinu myndum við þá taka við distanceinu og nota það til að færa robotinn áfram
+distanceið væri þá 573 * counter þar sem counter hækkar í hvert skipti sem while loopan keyrir
+í drive fallinu fer robitinn áfram það distance sem það á að gera og til baka það distance sem latið er inn

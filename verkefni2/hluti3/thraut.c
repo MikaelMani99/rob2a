@@ -1,0 +1,54 @@
+#pragma config(Sensor, dgtl1,  rightEncoder,        sensorQuadEncoder)
+#pragma config(Sensor, dgtl3,  leftEncoder,         sensorQuadEncoder)
+#pragma config(Motor,  port2,           rightMotor,    tmotorServoContinuousRotation, openLoop)
+#pragma config(Motor,  port3,           leftMotor,     tmotorServoContinuousRotation, openLoop, reversed)
+#include "../../headers/vex.h"
+void drive(float dist, int direction){
+	float fixd = dist * 100;
+	float turns = (fixd/WHEELBASELARGE) * 360 * direction;
+	SensorValue[rightEncoder] = 0;
+	if(direction > 0){
+		while(SensorValue[rightEncoder] < turns)
+		{
+		motor[rightMotor] = 63;
+		motor[leftMotor] = 63;
+  	}
+ 	}
+	else{
+		while(SensorValue[rightEncoder] > turns)
+		{
+		motor[rightMotor] = -63;
+		motor[leftMotor] = -63;
+  	}
+	}
+}
+void turn(int deg){
+	float d = 360 / deg;
+	float l = ROTATE360DEG / d;
+	SensorValue[rightEncoder] = 0;
+	if(l > 0 ){
+		while(SensorValue[rightEncoder] < l)
+  	{
+ 			motor[rightMotor] = -63;
+    	motor[leftMotor] = 63;
+ 		}
+	}
+	else{
+	 	while(SensorValue[rightEncoder] > l)
+  	{
+ 			motor[rightMotor] = 63;
+    	motor[leftMotor] = -63;
+ 		}
+	}
+
+}
+task main()
+{
+	drive(0.5, 1);
+	turn(-90);
+	drive(0.5, 1);
+	turn(90);
+	drive(0.5, 1);
+	turn(90);
+	drive(0.5, 1);
+}
