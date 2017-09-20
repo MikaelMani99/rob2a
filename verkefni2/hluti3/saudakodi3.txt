@@ -1,0 +1,5 @@
+við reiknuðum út að hjólin þurfa að snúast 1225° til að snúa robotinum 90°. við notuðum sá útreikninga sem base í turn fallinu okkar.
+við þurftum að fá robotan til að fara 0.5 metra áfram þannig við bjuggum til fallið drive() sem tekur inn tvær breytur, distance og direction, og ef direction er negative tala þa bakkar robotinn en ef hun
+er positive þá fer hann afram.
+síðan í main þá er for loopa sem keyrir 4 sinnum, það er alltaf keyrt drive() fallið og keyrt áfram um 0.5 metra, þegar i er 0 er keyrt turn() fallið með breytunni -90 og ef i er minna en 3 er gert það keyrt
+með breytunni 90.

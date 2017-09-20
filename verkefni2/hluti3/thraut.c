@@ -3,6 +3,11 @@
 #pragma config(Motor,  port2,           rightMotor,    tmotorServoContinuousRotation, openLoop)
 #pragma config(Motor,  port3,           leftMotor,     tmotorServoContinuousRotation, openLoop, reversed)
 #include "../../headers/vex.h"
+void stop(int time){
+		motor[rightMotor] = 0;
+		motor[leftMotor] = 0;
+		wait1Msec(1000 * time);
+}
 void drive(float dist, int direction){
 	float fixd = dist * 100;
 	float turns = (fixd/WHEELBASELARGE) * 360 * direction;
@@ -44,11 +49,15 @@ void turn(int deg){
 }
 task main()
 {
-	drive(0.5, 1);
-	turn(-90);
-	drive(0.5, 1);
-	turn(90);
-	drive(0.5, 1);
-	turn(90);
-	drive(0.5, 1);
+	for(int i; i < 4; i++){
+		drive(0.5, 1);
+		stop(1);
+		if(i == 0){
+			turn(-90);
+		}
+		else if(i < 3){
+			turn(90);
+		}
+		stop(1);
+	}
 }
