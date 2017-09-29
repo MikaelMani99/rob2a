@@ -1,0 +1,6 @@
+Látt allan kóðann inn í while loopu þannig að hann hættir aldrei að keyra
+gert if og else if skipanir fyrir stýripinnana til að sjá ef það er að fara áfram, bakka eða beygja til hægri eða vinstri.
+ef það er fært stýripinna áfram keyrir robot-inn áfram, ef það er látt stýripinna afturábak bakkar hann og ef það er látt til hægri eða vinstri
+beygir hann í sá átt
+allir takkarnir á hægri hliðinni virka, ef það er ýtt á takka U fer hendinn á robot-inum upp og ef það er ýtt á D þá fer hendin niður
+takkarnir L og R stjórna klónni, takkinn L opnar hana en takinn R lokar henni.

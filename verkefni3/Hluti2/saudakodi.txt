@@ -1,0 +1,4 @@
+kóðinn úr verkefni 2 verður í sér taski
+í byrjuninnni á main taskinu verður kallað í task thraut sem er kóðinn úr verkefni2 
+síðan mun while loopa keyra endalaust þangað til ýtt er á takkan til að stoppa
+síðan þegar ýtt er á takkan, stoppar while loopan og task thraut verður stoppað
