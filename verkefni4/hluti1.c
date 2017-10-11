@@ -6,14 +6,15 @@
 #pragma config(Sensor, in8,    lightSensor,         sensorReflection)
 #include "../headers/vex.h"
 #include "../robotfunctions/functions.c"
+
 task keyraMedanLeifir()
 {
 	while(true)
 	{
-		if(SensorValue(lightSensor) < 200)
+		if((SensorValue(lightSensor)) < 400)
 		{
-			if(SensorValue(sonarSensor) > 20 || SensorValue(sonarSensor) == -1){
-				drive(0.5, 1);
+			if(SensorValue(sonarSensor) > 40 || SensorValue(sonarSensor) == -1){
+				drive(0.1, 1);
 			}
 			else{
 
