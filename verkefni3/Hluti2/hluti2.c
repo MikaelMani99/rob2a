@@ -1,3 +1,9 @@
+/*
+DESCRIPTION:
+Drives the puzzle from project 1, but has a kill switch now
+*/
+
+
 #pragma config(Sensor, dgtl1,  rightEncoder,        sensorQuadEncoder)
 #pragma config(Sensor, dgtl3,  leftEncoder,         sensorQuadEncoder)
 #pragma config(Motor,  port2,           rightMotor,    tmotorServoContinuousRotation, openLoop)
