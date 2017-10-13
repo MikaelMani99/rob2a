@@ -1,3 +1,9 @@
+/*
+DESCRIPTION:
+this program is suppose to drive around by it self until the kill switch is pushed.
+how it drives around is that it checks if the light is on, then checks if there is something in front of it
+then it drives forward 10 cm.
+*/
 #pragma config(Sensor, dgtl1,  rightEncoder,        sensorQuadEncoder)
 #pragma config(Sensor, dgtl3,  leftEncoder,         sensorQuadEncoder)
 #pragma config(Motor,  port2,           rightMotor,    tmotorServoContinuousRotation, openLoop)

@@ -1,0 +1,5 @@
+nota thread þannig það er auðveldara að vera með kill switch takka.
+forritið byrjar á því að keyra threadinn sem í raun ætti að gera allt og keyrir threadinn þangað til ýtt er á killswitchið
+í threaddinu ætti að vera if skipun í byrjun sem að tékkar ef það er slökkt á ljósinu og ef það er slökkt á því stoppar hann og gerir ekki neitt
+annars keyrir hann áfram þar til hann er kominn nalægt eitthevrjum hlut þá snýr hann sér 90° og athugar hvort hann kemst áfram annars snýr hann sér
+aftur 90° og athugar hvort hann kemst áfram og framvegis
