@@ -1,0 +1,12 @@
+Ef það er ýtt á takka 7D þá stöðvar það allt sem er að keyra
+
+---
+Ef SensorValue af line follower right er innan við breytuna threshold þá beygir róbotinn aðeins
+til hægri, ananrs ef hægri sensor er ekki innan við threshold en miðju sensor er þá keyrir
+róbotið áfram og ef bæði hægri og miðju sensor eru ekki innan við threshold þá beygir hann aðeins
+til vinstri
+---
+
+Ef sonar sensorinn fer neðar en 25 þá hættir robotinn að keyra, klóinn fer niður og hann tekur
+upp hlutinn, snýr sér 180 gráður og keyrir til baka á línunni sem hann kom á og lætur svo hlutinn
+niður.
