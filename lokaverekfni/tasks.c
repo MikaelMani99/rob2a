@@ -28,12 +28,7 @@ task suicide2() { //Verkefni 2 Hluti 2
 	while(counter < 5){
 		SensorValue[rightEncoder] = 0;
 		int distance = 573 * counter;
-		if(counter % 2 == 0){
-			drive(distance, -1);
-		}
-		else {
-			drive(distance, 1);
-		}
+		drive2(distance);
 		counter+= 1;
 	}
 }
@@ -177,14 +172,14 @@ task pickUpBallTask(){ //Verkefni 6
 
 
 
-task verkefni2hlutur1() {
+task project2part1() {
 		StartTask(suicide1);
 		while(vexRT[Btn7D] != 1){
 
 		}
 }
 
-task verkefni2hlutur2() {
+task project2part2() {
 	StartTask(suicide2);
 	while(vexRT[Btn7D] != 1){
 
@@ -192,7 +187,7 @@ task verkefni2hlutur2() {
 
 }
 
-task verkefni2hlutur3() {
+task project2part3() {
 	StartTask(puzzle);
 	while(vexRT[Btn7D] != 1){
 
@@ -200,7 +195,7 @@ task verkefni2hlutur3() {
 
 }
 
-task verkefni3hlutur1() {
+task project3part1() {
 	StartTask(driveRobot);
 	while(vexRT[Btn7D] != 1){
 
@@ -208,7 +203,7 @@ task verkefni3hlutur1() {
 
 }
 
-task verkefni3hlutur2() {
+task project3part2() {
 	StartTask(puzzle);
 	while(vexRT[Btn7D] != 1){
 
@@ -216,7 +211,7 @@ task verkefni3hlutur2() {
 
 }
 
-task verkefni4() {
+task project4() {
 	StartTask(driveEndlessly);
 	while(vexRT[Btn7D] != 1){
 
@@ -225,14 +220,14 @@ task verkefni4() {
 }
 
 
-task verkefni5(){
+task project5(){
 	StartTask(followLineTask);
 	while(vexRT[Btn7D] != 1){
 	}
 
 }
 
-task verkefni6() {
+task project6() {
 	StartTask(followLineTask);
 	StartTask(pickUpBallTask);
 	while(vexRT[Btn7D] != 1){

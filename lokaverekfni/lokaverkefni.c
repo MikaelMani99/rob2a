@@ -21,14 +21,14 @@
 void stopTasks(){
 	SensorValue[rightEncoder] = 0;
 	SensorValue[leftEncoder] = 0;
-	StopTask(verkefni2hlutur1);
-	StopTask(verkefni2hlutur2);
-	StopTask(verkefni2hlutur3);
-	StopTask(verkefni3hlutur1);
-	StopTask(verkefni3hlutur2);
-	StopTask(verkefni4);
-	StopTask(verkefni5);
-	StopTask(verkefni6);
+	StopTask(project2part1);
+	StopTask(project2part2);
+	StopTask(project2part3);
+	StopTask(project3part1);
+	StopTask(project3part2);
+	StopTask(project4);
+	StopTask(project5);
+	StopTask(project6);
 	StopTask(suicide1);
 	StopTask(suicide2);
 	StopTask(puzzle);
@@ -45,35 +45,35 @@ task main()
 	while(vexRT[Btn7L] != 1){
 		if(vexRT[Btn5D] == 1){
 			stopTasks();
-			StartTask(verkefni2hlutur1);
+			StartTask(project2part1);
 		}
 		else if(vexRT[Btn5U] == 1){
 			stopTasks();
-			StartTask(verkefni2hlutur2);
+			StartTask(project2part2);
 		}
 		else if(vexRT[Btn6D] == 1){
 			stopTasks();
-			StartTask(verkefni2hlutur3);
+			StartTask(project2part3);
 		}
 		else if(vexRT[Btn6U] == 1){
 			stopTasks();
-			StartTask(verkefni3hlutur1);
+			StartTask(project3part1);
 		}
 		else if(vexRT[Btn8D] == 1){
 			stopTasks();
-			StartTask(verkefni3hlutur2);
+			StartTask(project3part2);
 		}
 		else if(vexRT[Btn8L] == 1){
 			stopTasks();
-			StartTask(verkefni4);
+			StartTask(project4);
 		}
 		else if(vexRT[Btn8U] == 1){
 			stopTasks();
-			StartTask(verkefni5);
+			StartTask(project5);
 		}
 		else if(vexRT[Btn8R] == 1){
 			stopTasks();
-			StartTask(verkefni6);
+			StartTask(project6);
 		}
 	}
 	StopAllTasks();
